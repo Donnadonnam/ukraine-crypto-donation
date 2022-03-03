@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ukraine Crypto Donation</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        body {
+          background: linear-gradient(
+            to top,
+            rgb(254, 221, 0) 0%,
+            rgb(254, 221, 0) 50%,
+            rgb(0, 87, 184) 50%,
+            rgb(0, 87, 184) 100%
+          );
+          display: flex;
+        }
+        input {
+          border-top-style: hidden;
+          border-right-style: hidden;
+          border-left-style: hidden;
+          border-bottom-style: groove;
+          background-color: #eee;
+        }
+        h1 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+        .no-outline:focus {
+          outline: none;
+        }
+        
+      </style>
+</head>
+
+<body class="min-h-screen min-w-screen flex flex-col justify-center items-center">
+  <div class="bg-white rounded-md shadow border p-4 w-128">
+     <div class="flex-col space-y-2 justify-center items-center">
+         <h1 style="font-size:60px;" class="text-3xl font-bold mb-4 mt-0"> Help Ukraine!</h1>
+         <br>
+
+         <h3 style="font-size:18px;" class="text-3xl mb-4 mt-0">Ukraine needs your help! The Government of Ukraine has set up an Ethereum address to facilitate cryptocurrency donations. 
+          You can check it <a class="text-green-500" href="https://etherscan.io/address/0x165cd37b4c644c2921454429e7f9358d18a45e14">here</a>. 
+          <div>If you have a browser wallet like <a class="text-green-500" href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn">Metamask</a>, you can send ether by following these steps:</div></h3>
+
+         <script src="./dist/bundle.js" type="text/javascript"></script>
+
+         <h2 style="font-size:24px;" class="text-3xl font-bold mb-4 mt-0">Step 1.</h2>
+         <h3 style="font-size:18px;" class="text-3xl mb-4 mt-0">Click on the "Connect" button to use your browser wallet.</h3>
+         
+         <button id="connectButton" onclick="bundle.connect()" style="font-size:24px;" class="mx-auto rounded-md p-4 bg-purple-500 w-64 text-white"> Connect </button>
+         <br>
+         <br>
+         <!-- <div class="h-14 rounded-md bg-gradient-to-r from-yellow-500 to-blue-500"></div> -->
+
+         <h2 style="font-size:24px;" class="text-3xl font-bold mb-4 mt-0">Step 2.</h2>
+         <h3 style="font-size:18px;" class="text-3xl mb-4 mt-0">Choose the amount you want to donate (the dollar amount will be automatically converted to ether). <br> 
+          You can directly enter the amount in the textbox "Enter amount in dollars" (e.g. 15.25). <br>
+          Then click the red button ("Donate a different amount") to complete the donation. </h3>
+
+         <button id="send25DollarsButton" onclick="bundle.send25Dollars()" style="font-size:24px;" class="mx-auto rounded-md p-5 bg-blue-500 w-64 text-white"> Donate 25$ </button>
+
+         <button id="send50DollarsButton" onclick="bundle.send50Dollars()" style="font-size:24px;" class="mx-auto rounded-md p-5 bg-green-500 w-64 text-white"> Donate 50$ </button>
+
+         <button id="send100DollarsButton" onclick="bundle.send100Dollars()" style="font-size:24px;" class="mx-auto rounded-md p-5 bg-yellow-500 w-64 text-white"> Donate 100$ </button>
+
+         <button id="sendAmountDollarsButton" onclick="bundle.sendAmountDollars()" style="font-size:18px;" class="mx-auto rounded-md p-5 bg-red-500 h-27 w-64 text-white"> Donate a different amount </button>
+         <input type="text" name="" placeholder="Enter amount in dollars" id="amountDollars">
+         <div id="ETHUSD" style="font-size:24px;" class="text-3xl font-bold mb-4 mt-0"></div>
+         <br>
+
+         <h3 style="font-size:18px;" class="text-3xl mb-4 mt-0">You can check the code here :)</h3>
+         <br>
+         <h3 style="font-size:16px;" class="text-3xl font-bold mb-4 mt-0">DISCLAIMER:</h3>
+
+         <h3 style="font-size:16px;" class="text-3xl mb-4 mt-0">This website is NOT official, it is a non-profit project created by individuals.</h3>
+
+  </div>
+
+
+
+
+</body>
+
+</html>
